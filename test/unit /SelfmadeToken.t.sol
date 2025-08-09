@@ -22,7 +22,7 @@ contract SelfMadeTokenTest is Test {
     function setUp() public {
         DeploySelfMadeToken deployScript = new DeploySelfMadeToken();
         deployScript.setOwnerOverride(deployer);
-        (smToken, configHelper) = deployScript.deployForTest(deployer);
+        (smToken, configHelper) = deployScript.run();
 
         vm.deal(user, USER_BALANCE);
     }
