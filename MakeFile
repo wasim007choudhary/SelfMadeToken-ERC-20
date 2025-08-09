@@ -1,0 +1,20 @@
+.PHONY: cr htmlcr ocr fullcr
+
+# Generate raw coverage data
+cr:
+	@forge coverage --report lcov
+
+# Generate HTML report (requires lcov.info)
+htmlcr: cr
+	@genhtml lcov.info --output-dir coverage-report
+
+# Open HTML report (requires report to exist)
+ocr: htmlcr
+	@open coverage-report/index.html
+
+# Complete coverage pipeline
+fullcr: ocr
+
+# Clean coverage artifacts
+clean:
+	@rm -rf coverage-report lcov.info
