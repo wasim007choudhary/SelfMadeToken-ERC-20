@@ -26,6 +26,14 @@ contract DeploySelfMadeToken is Script {
         ownerOverride = _address;
     }
 
+    function deployForTest(address owner) public returns (SelfmadeToken myToken, HelperConfig hConfig) {
+        uint256 initialSupply = INITIAL_TEST_SUPPLY;
+        vm.startPrank(owner);
+        hConfig = new HelperConfig();
+        myToken = new SelfmadeToken(initialSupply);
+        vm.stopPrank();
+    }
+
     function run() external returns (SelfmadeToken myToken, HelperConfig hConfig) {
         if (block.chainid == 1 && ownerOverride != address(0)) {
             revert DeploySelfMadeToken___OwnerOverrideIsDisabledOnMainnet();
