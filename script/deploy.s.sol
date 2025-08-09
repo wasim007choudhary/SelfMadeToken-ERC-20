@@ -85,8 +85,10 @@ contract DeploySelfMadeToken is Script {
         innerJsonOutput = vm.serializeAddress(chainIdStr, "SelfmadeToken", address(myToken));
         // attaching the chain id with the innerjson
         string memory outerJsonOuput = vm.serializeString("root", chainIdStr, innerJsonOutput);
-        if (!vm.envOr("CI", false) && block.chainid == 1) {
+        if (block.chainid == 1 && !vm.envOr("CI", false)) {
             vm.writeFile(DEPLOYMENT_PATH, outerJsonOuput);
+            console.log("chainid:", block.chainid);
+            console.log("CI env var:", vm.envOr("CI", false));
         }
         console.log("Deployments written to file for chain ID:", chainIdStr);
         console.log("Deployment complete.");
