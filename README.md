@@ -35,7 +35,7 @@ A simple, gas-optimized ERC-20 compatible token implemented in Solidity 0.8.19, 
 ### Prerequisites
 
 - [Foundry](https://foundry.paradigm.xyz/) installed
-- Solidity 0.8.19 compatible environment
+- Solidity 0.8.19 and above compatible environment
 - Unix-based shell (for scripts)
 
 ### Installation
