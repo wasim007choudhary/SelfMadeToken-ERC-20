@@ -4,6 +4,9 @@
 [![Foundry](https://img.shields.io/badge/Foundry-v1.0.0-orange)](https://github.com/foundry-rs/foundry)
 [![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)](https://github.com/<your-repo>/actions/workflows/test.yml)
 
+[![X (Twitter)](https://img.shields.io/badge/X-@i___wasim-black?logo=x)](https://x.com/i___wasim)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Wasim%20Choudhary-blue?logo=linkedin)](https://www.linkedin.com/in/wasim-007-choudhary/)
+
 A simple, gas-optimized ERC-20 compatible token implemented in Solidity 0.8.19, with custom errors and safe allowance handling. Designed and tested using Foundry.
 
 ---
