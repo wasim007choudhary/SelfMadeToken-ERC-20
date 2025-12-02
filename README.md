@@ -11,7 +11,7 @@ A simple, gas-optimized ERC-20 compatible token implemented in Solidity 0.8.19, 
 
 ---
 
-## Features
+## Features Details
 
 - Standard ERC-20 token functions: `transfer`, `approve`, `transferFrom`, `increaseAllowance`, `decreaseAllowance`
 - Custom errors for efficient gas usage and clear revert reasons
