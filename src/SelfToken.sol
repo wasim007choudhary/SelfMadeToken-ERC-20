@@ -27,7 +27,7 @@ contract SelfmadeToken {
     string public constant name = "SelfMade Token"; // Using constant for gas efficiency and clarity, as per ERC-20 standard, not following the naming convention as it need to match the erc20 functions name strictly
     /*
     we will not use the below as both provide the same and it is slightly higher and the above line string public constant name = "Selfmade Token"; is more cleaner and gas efficient and follows ERC-20 token standard
-    
+
     function name() public pure returns (string memory) {
         return "Selfmade Token";
     }
